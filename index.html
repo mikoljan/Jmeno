@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Výběr jména</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login" hidden>
+    <h1>Kdo jsi?</h1>
+    <div class="login-btns">
+      <button data-who="mliko">Mliko</button>
+      <button data-who="danca">Danča</button>
+    </div>
+  </div>
+
+  <div id="app" hidden>
+    <header>
+      <h1>Výběr jména</h1>
+      <div class="me">Jsi <b id="meName"></b> · <a href="#" id="switch">přepnout</a></div>
+    </header>
+    <nav id="rounds"></nav>
+    <div class="filters">
+      <label><input type="checkbox" id="fTodo"> Čeká na můj hlas</label>
+      <label><input type="checkbox" id="fTie"> Jen neshody</label>
+      <span id="stats"></span>
+    </div>
+    <main id="matches"></main>
+  </div>
+
+  <div id="setup" hidden>
+    <h1>Pavouk ještě neexistuje</h1>
+    <p>Vytvoří se předkolo (31 zápasů) a 256členný pavouk, jména se náhodně zamíchají. Dělá se jen jednou.</p>
+    <button id="init">Vytvořit pavouka</button>
+  </div>
+
+  <div id="error" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
